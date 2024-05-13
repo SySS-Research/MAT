@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user1\\Desktop\\mssql-clr-binary\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7597DBF9-D246-44F6-8DB9-E3B0DDE27352}|mssql-clr\\mssql-clr.csproj|c:\\users\\user1\\desktop\\mssql-clr-binary\\mssql-clr\\storedprocedure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7597DBF9-D246-44F6-8DB9-E3B0DDE27352}|mssql-clr\\mssql-clr.csproj|solutionrelative:mssql-clr\\storedprocedure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StoredProcedure.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\mssql-clr-binary\\mssql-clr\\StoredProcedure.cs",
+              "RelativeDocumentMoniker": "mssql-clr\\StoredProcedure.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\mssql-clr-binary\\mssql-clr\\StoredProcedure.cs",
+              "RelativeToolTip": "mssql-clr\\StoredProcedure.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAcAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T19:12:19.515Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

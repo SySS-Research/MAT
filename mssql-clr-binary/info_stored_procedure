@@ -1,0 +1,30 @@
+If the option "--stoprox" is used to execute os-commands, a custom created CLR-assembly (DLL file) is used. This assembly was created with the C# code from the project "mssql-clr-binary".
+
+To avoid that the DLL file has to be copied to the system on which M.A.T is used, it was hex encoded and integrated into the M.A.T executable.
+
+The functionality of "--stoprox" can be customized as following:
+1)
+Edit the C# code of "StoredProcedure.cs"
+
+2)
+Create the DLL file
+
+3)
+Encode the DLL file to a hex-string using powershell:
+
+$assemblyFile = "C:\clr-binary.dll"
+$stringBuilder = New-Object -Type System.Text.StringBuilder
+$fileStream = [IO.File]::OpenRead($assemblyFile)
+while (($byte = $fileStream.ReadByte()) -gt -1) {
+$stringBuilder.Append($byte.ToString("X2")) | Out-Null
+}
+$stringBuilder.ToString() -join "" | Out-File hexencodedbinary.txt
+
+4)
+Replace the hex-encoded binary (string) in the M.A.T project with the content of the file "hexencodedbinary.txt". Insert the new created hex-encoded binary right after the "0x". The line which should be edited looks like the following:
+
+###########################################################################################################################################
+res = executeQuery("CREATE ASSEMBLY assemblyxyz FROM 0x[INSERT CONTENT OF hexencodedbinary.txt HERE] WITH PERMISSION_SET = UNSAFE;", con);
+###########################################################################################################################################
+5)
+Rebuild the M.A.T project
