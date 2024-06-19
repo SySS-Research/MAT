@@ -211,9 +211,6 @@ namespace MAT
             [Option('p', "password", Required = false, HelpText = "SQL password")]
             public String Password { get; set; }
 
-            [Option(Required = false, HelpText = "Log in with Windows Integrated Authentication")]
-            public bool Winauth { get; set; }
-
             [Option('d', "database", Required = false, HelpText = "Database name (default: 'master')")]
             public String Database { get; set; }
 
@@ -251,7 +248,7 @@ namespace MAT
                 get
                 {
                     return new List<Example>() {
-                        new Example("Execute an OS command on the SQL server", new Options { Server = "localhost", User = "user1", Password = "password", Winauth=false, LinkedServer="LINKEDSRVX", OS_Command="whoami", SQL_Command="SELECT CURRENT_USER" })
+                        new Example("Execute an OS command on the SQL server", new Options { Server = "localhost", User = "sqluser", Password = "sqlpassword", LinkedServer="LINKEDSRVX", OS_Command="whoami", SQL_Command="SELECT CURRENT_USER" })
                     };
                 }
             }

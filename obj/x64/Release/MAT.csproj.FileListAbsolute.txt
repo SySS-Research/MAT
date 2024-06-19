@@ -1,0 +1,10 @@
+C:\Users\user1\Desktop\MAT-main\obj\x64\Release\MAT.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\MAT-main\obj\x64\Release\MAT.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\MAT-main\bin\x64\Release\MAT.exe.config
+C:\Users\user1\Desktop\MAT-main\bin\x64\Release\MAT.exe
+C:\Users\user1\Desktop\MAT-main\bin\x64\Release\MAT.pdb
+C:\Users\user1\Desktop\MAT-main\bin\x64\Release\CommandLine.dll
+C:\Users\user1\Desktop\MAT-main\bin\x64\Release\CommandLine.xml
+C:\Users\user1\Desktop\MAT-main\obj\x64\Release\MAT.csproj.Up2Date
+C:\Users\user1\Desktop\MAT-main\obj\x64\Release\MAT.exe
+C:\Users\user1\Desktop\MAT-main\obj\x64\Release\MAT.pdb

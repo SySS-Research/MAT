@@ -1,8 +1,14 @@
+<div align="center">
+  <a href="https://github.com/SySS-Research/MAT">
+    <img src="images/logo.jpeg" height="300">
+  </a>
+
+  <h1>M.A.T - A swiss army knife for pentesting MSSQL servers</h1>
+</div>
+
 ## Description
 
-In today's increasingly interconnected data landscape, access to external data sources is crucial for the business processes of many companies. Microsoft SQL Server, in addition to local instances, also offers a powerful feature called "Linked Servers", which allows seamless access to data sources outside your local SQL Server instance. When properly configured, both local instances and Linked Servers provide a high level of security. However, in case of accidental misconfiguration, the consequences are often severe. In complex scenarios where multiple Linked Servers interact with each other, misconfigurations are often not immediately noticed. For this reason, the MSSQL ATTACK TOOL (M.A.T) was developed at SySS internally in a Research & Development project. The tool, programmed in C#, allows for the fast discovery and exploitation of vulnerabilities in MSSQL servers.
-
-In the following article, we delve into the capabilities, functionalities, and usage of the MSSQL ATTACK TOOL, exploring how it can be leveraged to enhance the security posture of MSSQL environments. From automatic vulnerability checks to seamless execution of SQL and system commands, this tool equips security practitioners with the means to proactively identify and mitigate security risks, safeguarding the integrity and confidentiality of data stored in MSSQL databases.
+The MSSQL ATTACK TOOL (M.A.T) was developed at SySS internally in a Research & Development project. The tool, programmed in C#, allows for the fast discovery and exploitation of vulnerabilities in MSSQL servers.
 
 ## OVERVIEW OF THE FUNCTIONALITY
 - **Performs automatic checks and identifies vulnerabilities**
@@ -15,13 +21,16 @@ In the following article, we delve into the capabilities, functionalities, and u
 - **Automatically checks and enables RPC OUT (if RPC OUT is disabled for Linked Servers, stored procedures such as xp_cmdshell on Linked Servers are not usable)**
 - **Automatic dumping of MSSQL user hashes**
 
+## Compilation
+For the compilation, Visual Studio was used. Also, the NuGet packages "CommandLineParser.2.9.1" and "Costura.Fody" are required. Alternatively, feel free to use the executable in the release.
+
 ## USAGE
 ```
 Example: MAT.exe [options]
-Example: MAT.exe --server localhost -u user1 -p password --winauth --os-command "whoami"
+Example: MAT.exe --server localhost -u sqlusername -p sqlpassword --os-command "whoami"
 ```
 
-If the executable file is executed without credentials (no option "-u:" or "-p:"), it will by default attempt to log in using Windows Integrated Authentication. When started without parameters, a help output is displayed explaining the function of each parameter.
+If the executable file is executed without credentials (no option "-u:" or "-p:"), it will by default attempt to log in using Windows Integrated Authentication(current logged in Windows user). 
 
 ```
 Options:
@@ -29,7 +38,6 @@ Options:
 -s, --server           Required. SQL server
 -u, --user             SQL user
 -p, --password         SQL password
---winauth              Log in with Windows Integrated Authentication
 -d, --database         Database name (default: 'master')
 -r, --relay            Trigger an NTLM-relay to the given IP via XP_DIRTREE
 -i, --impersonate      Impersonate the specified SQL user
